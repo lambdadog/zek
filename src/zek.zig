@@ -335,7 +335,6 @@ pub const Page = struct {
         return try f.readUntilDelimiterOrEof(&tempBuf, '\n');
     }
     pub fn load(self: *Self, hashedTitles: ?std.StringHashMap(usize), title: []const u8) !void {
-        _ = hashedTitles;
         try self.append(0, title, false);
         const fname = try util.pageFileName(title);
         if (util.fileExists(fname)) {

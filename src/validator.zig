@@ -102,5 +102,4 @@ pub fn validate(allocator: Allocator) !void {
         }
     }
     try out.print("Found {any} validation errors.\n", .{errorCount});
-    _ = allocator;
 }
